@@ -1,0 +1,67 @@
+main {
+    background: rgb(241, 240, 240);
+    border-radius: 5px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 20px 0px;
+    align-items: center;
+}
+
+#img-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 10px 10px 10px 10px;
+    margin: 0px 15px 0px 15px;
+}
+
+#img-caption {
+    padding: 20px 0px 10px 0px;
+}
+
+#tribute-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#bio-intro {
+    align-self: center;
+    padding-top: 35px;
+}
+
+#bio {
+    align-self: center;
+    max-width: 500px;
+}
+
+blockquote {
+    align-self: left;
+    font-style: italic;
+}
+
+year {
+    font-weight: bold;
+}
+
+li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-self: left;
+}
+
+#tribute-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
