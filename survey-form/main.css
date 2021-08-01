@@ -52,11 +52,22 @@ header {
     border: 1px solid rgba(255, 255, 255, 80%);
 }
 
+fieldset {
+    color: white;
+    margin-top: 1.5rem !important;
+}
+
+.radio-block {
+    display: flex;
+    flex-direction: row;
+}
+
 .input-radio {
     min-height: 1.25rem;
     min-width: 1.25rem;
     padding: 0.35rem 0.75rem;
     margin-right: 0.5rem;
+    color: white;
 }
 
 label {
