@@ -1,0 +1,163 @@
+body {
+    margin: 8px 8px 0px 8px;
+}
+
+#header {
+    display: flex;
+    flex-flow: row;
+    position: sticky;
+    width: 100%;
+    background-color: #0cbaff;
+    top: 10px;
+    justify-content: space-around;
+    align-items: center;
+    border: 0.1em solid;
+    border-radius: 0.5em;
+}
+
+#header-img {
+    width: 3em;
+    margin: 5px 0px 5px 10px;
+}
+
+nav {
+    display: flex;
+    width: 75%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#email {
+    height: 2em;
+    width: 20em;
+}
+
+#email-form-text {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#submit {
+    margin-top: 10px;
+    background: greenyellow;
+    height: 2em;
+    font-size: 14px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#features {
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image-featured {
+    width: auto;
+    height: 3.5em;
+    margin: 5px 15px 5px 15px;
+}
+
+.feature-text {
+    width: 80%;
+    overflow: auto;
+}
+
+#works {
+    margin: 30px 0px 30px 0px;
+}
+
+#pricing {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+}
+
+.pricing-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3);
+    border: 0.1em solid;
+    margin: 10px;
+    border-radius: 0.4em;
+}
+
+@media (max-width: 650px) {
+    #pricing {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.pricing-card-title {
+    background-color: rgb(247, 255, 2);
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 0;
+    border-radius: 0.4em 0.4em 0 0;
+}
+
+.pricing-card-price {
+    font-weight: bold;
+}
+
+.pricing-card-button {
+    background-color: rgb(238, 89, 34);
+    height: 2em;
+    font-size: 14px;
+    margin: 20px 0px;
+    width: 8em;
+}
+
+#footer {
+    height: 3em;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 20px;
+    background-color: rgb(216, 216, 216);
+    padding: 10px 10px 10px 10px;
+    border-radius: 0.4em 0.4em 0 0;
+}
+
+#legal {
+    flex-direction: row;
+}
+
+.legal-link {
+    margin: 0px 10px 0px 10px;
+}
+
+#copyright {
+    font-size: 12px;
+    margin-right: 10px;
+}
