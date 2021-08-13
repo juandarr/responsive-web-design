@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div id="container">
+      <nav id="navbar">
+        <header><h1>CSS grid docs</h1></header>
+        <a class="nav-link" href="#Basics">Basics</a>
+        <a class="nav-link" href="#Gaps_and_spacing">Gaps and spacing</a>
+        <a class="nav-link" href="#Alignment">Alignment</a>
+        <a class="nav-link" href="#Areas">Areas</a>
+        <a class="nav-link" href="#Responsive_and_flexible_layout"
+          >Responsive and flexible layout</a
+        >
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="Basics">
+          <header class="section-title">Basics</header>
+          <p>
+            The CSS grid is a new standard that makes easy to create complex
+            responsive layouts. It works by turning HTML elements into a grid,
+            and lets you place child element anywhere within.
+          </p>
+          <p>
+            You can define an CSS grid by using the property and value
+            <code>display: grid;</code>. The parent element is referred to as
+            the container while the children are called items.
+          </p>
+          <p>
+            Defining the display property as grid doesn't state the structure of
+            the grid. To state a structure, you use the properties like
+            <code>grid-template-columns</code> and
+            <code>grid-template-rows</code>. These properties can have one or
+            more values representing a new column/row as well as its
+            width/height.
+          </p>
+          <p>
+            Using only one of the two properties (<code
+              >grid-template-rows</code
+            >
+            or <code>grid-template-columns</code>) will set the other
+            automatically. By using both properties you can clearly state the
+            dimensions of the grid.
+          </p>
+          <h3>Grid units</h3>
+          <p>
+            The set the size of each dimension (width or height) you can use
+            absolute (`px`) or relative (`em`) units. You can also use the
+            following ones:
+          </p>
+          <ul>
+            <li>
+              <code>fr</code> : sets the column or row to a fraction of the
+              available space.
+            </li>
+            <li>
+              <code>auto</code> : sets the columns or row to the width or height
+              of its content automatically.
+            </li>
+            <li>
+              <code>%</code> : adjust the column or row to the percent width of
+              its container.
+            </li>
+          </ul>
+        </section>
+        <section class="main-section" id="Gaps_and_spacing">
+          <header class="section-title">Gaps and spacing</header>
+          <p>
+            When you want to create a gap between the columns you use the
+            property `grid-column-gap` with the value of the gap in absolute or
+            relative size units. Gaps between rows can be added with the
+            property `grid-row-gap`, and the value of the gap in absolute or
+            relative units.
+          </p>
+          <p>
+            <code>grid-gap</code> is a shorthand property for
+            <code>grid-row-gap</code> and <code>grid-column-gap`</code>. If one
+            value is set it will create gaps for both rows and columns. If two
+            values are set, the first one sets the row gap and second one sets
+            the column gap.
+          </p>
+          <p>
+            A useful concept here is the one of line. A grid is represented by
+            horizontal and vertical lines numbered from 1 up, with the origin
+            being the top left corner of the grid. With
+            <code>grid-column</code> you can control how many columns an item
+            will consume. For example, the value `1/3` is used for the item to
+            include columns 1 and 2. You can also define how many rows an item
+            spans from by using the property <code>grid-row</code>
+          </p>
+        </section>
+        <section class="main-section" id="Alignment">
+          <header class="section-title">Alignment</header>
+          <p>
+            In CSS grid the content of each item is located in a box which is
+            referred to as a cell. You can align the content's position within
+            its cell horizontally by using the
+            <code>justify-self</code> property on a grid item.
+          </p>
+          <p>
+            By default, this property's value is `stretch`. Here are other
+            options:
+          </p>
+          <ul>
+            <li>
+              <code>start</code> : aligns the content at the left of the cell.
+            </li>
+            <li>
+              <code>center</code> : aligns the content in the center of the
+              cell.
+            </li>
+            <li>
+              <code>end</code> : aligns the content at the right of the cell
+            </li>
+          </ul>
+          <p>
+            You can also align an item vertically in its cell using the
+            <code>align-self</code> property. It receives the same values
+            <code>justify-self</code> receives.
+          </p>
+          <p>
+            When you want all the items from a CSS grid to share the same
+            alignment, you can use <code>justify-items</code>. It receives all
+            the values described in the previous lessons:
+            <code>stretch</code> as default, <code>center</code>,
+            <code>start</code> and <code>end</code>.You can set the vertical
+            alignment for all the items in a grid using
+            <code>align-items</code>.
+          </p>
+        </section>
+        <section class="main-section" id="Areas">
+          <header class="section-title">Areas</header>
+          <p>
+            You can group cells of your grid together into an area and give the
+            area a custom name. You can do this using
+            <code>grid-template-areas</code> on the container.
+          </p>
+          <code
+            >.container { grid-template-areas: "header header header" "advert .
+            content" "footer footer footer"; }</code
+          >
+          <p>
+            Each pair of quotes define a row. Each word defines a cell in the
+            grid and you use the same label to put them together in the same
+            "label" group - In the example above, first three cells belong to
+            the "header" group. Fourth cell belong to the area "advert", fifth
+            designate an empty cell in the grid, sixth belong to the "content"
+            area. Last three cells belong to the "footer" area.
+          </p>
+          <p>
+            After the creation of a grid template you can place an item in your
+            custom area by referencing the name you gave in the property
+            <code>grid-area</code> of the item.
+          </p>
+          <p>
+            There is another way to use the <code>grid-area</code> property. If
+            your grid doesn't have an areas template to reference, you can
+            create an area on the fly for an item to be placed as follows:
+            <code>grid-area: 1/1/2/4;</code>. The instruction is read as follow:
+            <code
+              >grid-area: horizontal line start/vertical line start/horizontal
+              line end/ vertical line end</code
+            >. In the previous line, <code>grid-area</code> will cover
+            horizontal lines from 1 to 2, and vertical lines from 1 to 4.
+          </p>
+          <h3>Repeat</h3>
+          <p>
+            The <code>repeat</code> function can be used to repeat the
+            definition of a row of column/row (or a set of them) n times. You
+            can also mix the repeat function with literal definitions.
+          </p>
+          <h3>Minmax</h3>
+          <p>
+            Another function used in grid templates is <code>minmax</code>. This
+            function allows to set a size range so the item resizes when the
+            grid container dimensions change.
+          </p>
+        </section>
+        <section class="main-section" id="Responsive_and_flexible_layout">
+          <header class="section-title">Responsive and flexible layout</header>
+          <p>
+            You can use <code>auto-fill</code> with the repeat function to
+            create as many columns/rows as required depending on the size of the
+            container. This can be combined with <code>minmax</code> to create
+            flexible layouts:
+          </p>
+          <code>repeat(auto-fill, minmax(60px, 1fr));</code>
+          <p>
+            When the container changes size, this setup keeps inserting 60px
+            columns and stretching them until it can insert another one. The
+            following example is more general, it illustrates how the layout
+            adapts to the dimensions of the container.
+          </p>
+          <p>
+            <code>auto-fit</code> works similar to <code>auto-fill</code>. The
+            only difference is that when the container's size exceeds the size
+            of all the items combined, <code>auto-fill</code> keeps inserting
+            empty rows or columns and pushed your items to the side.
+            <code>auto-fit</code> collapses those empty rows/columns and
+            stretches your items to fit the size of the container.
+          </p>
+          <p>
+            Media queries combined with the CSS grid features are powerful tools
+            to create responsive design.
+          </p>
+          <p>
+            Turning an element into a grid affect the behavior of its direct
+            descendants. By turning a direct descendant of a grid element into a
+            grid, you have a grid within a grid.
+          </p>
+        </section>
+      </main>
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </div>
+  </body>
+</html>
