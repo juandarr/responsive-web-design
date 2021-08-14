@@ -24,8 +24,8 @@ code {
     display: flex;
     flex-direction: column;
     overflow: auto;
-    width: 20%;
-    margin-left: 5%;
+    width: 200px;
+    margin-left: 30px;
 }
 
 .nav-link {
@@ -41,7 +41,7 @@ code {
 #main-doc {
     margin-top: 20px;
     width: auto;
-    margin-left: 28%;
+    margin-left: 250px;
     margin-right: 2.5%;
 }
 
@@ -52,7 +52,8 @@ code {
     #navbar {
         position: relative;
         width: 90%;
-        margin-right: 2.5%;
+        margin-left: 5%;
+        margin-right: 5%;
         text-align: center;
     }
     #main-doc {
