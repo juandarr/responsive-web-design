@@ -2,6 +2,89 @@
 <html>
   <head>
     <title>Personal page</title>
+    <link rel="stylesheet" href="main.css" />
   </head>
-  <body></body>
+  <body>
+    <navbar id="navbar">
+      <a class="nav-link" href="#welcome-section"
+        ><div class="nav-text">About</div></a
+      >
+      <a class="nav-link" href="#projects">Work</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </navbar>
+    <main id="main-content">
+      <section id="welcome-section">
+        <h1 id="welcome-section-title">Hello world!,</h1>
+        <h3>I am <bold>Juan</bold>, an engineer and creative</h3>
+      </section>
+      <section id="projects">
+        <h2 id="projects-headline">These are some of my projects:</h2>
+        <div id="project-grid">
+        <div class="project-tile">
+          <a href="https://juandarr.github.io">
+            <img
+              class="tile-image"
+              src="resources/juanda_page.png"
+              alt="Page preview"
+            />
+            <h2 class="tile-title" >Personal website</h2>
+          </a>
+        </div>
+        <div class="project-tile">
+          <a href="https://juandarr.github.io">
+            <img
+              class="tile-image"
+              src="resources/landing-page.png"
+              alt="Landing page preview"
+            />
+            <h2 class="tile-title" >Landing page</h2>
+          </a>
+        </div>
+        <div class="project-tile">
+          <a href="https://juandarr.github.io">
+            <img
+              class="tile-image"
+              src="resources/tecnical-documentation.png"
+              alt="Technical documentation preview"
+            />
+            <h2 class="tile-title">Technical documentation</h2>
+          </a>
+        </div>
+        <div class="project-tile">
+          <a href="https://juandarr.github.io">
+            <img
+              class="tile-image"
+              src="resources/game-form.png"
+              alt="Form preview"
+            />
+            <h2 class="tile-title">Form</h2>
+          </a>
+        </div>
+        <div class="project-tile">
+          <a href="https://juandarr.github.io">
+            <img
+              class="tile-image"
+              src="resources/tribute-page.png"
+              alt="Tribute page preview"
+            />
+            <h2 class="tile-title">Tribute page</h2>
+          </a>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Want to stay in touch?</h2>
+        <h3>Feel free to ping me out in one of these places:</h3>
+        <div id="contact-link">
+          <a id="profile-link" href="https://juandarr.github.io" target="_blank"
+            ><p id="profile-text">Github</p><img id="profile-image" src="resources/github.svg"
+          /></a>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div id="company">Overcode technologies</div>
+      <div id="copyright">Copyright 2021</div>
+    </footer>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
 </html>
